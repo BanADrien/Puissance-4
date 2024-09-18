@@ -1,0 +1,177 @@
+body {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(104, 104, 104);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+   
+
+}
+.titre{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+}
+.joueur{
+    margin: 0;
+}
+
+
+.colone {
+    display: flex;
+    flex-direction: column;
+}
+
+.jeu {
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: row;
+
+    background-color: rgb(60, 60, 60);
+    
+    border: 0.15rem solid;
+    width: 27rem;
+    height: 23rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.5); 
+}
+
+button {
+    width: 2.7rem;
+    height: 2.7rem;
+    margin: 0.5rem;
+    background-color: rgb(86, 85, 85);
+   
+    border: 0.15rem solid;
+    border-color: black;
+    border-radius: 4rem;
+    color:  rgb(86, 85, 85);
+   
+}
+
+.tout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.rouge {
+    background-color: rgb(151, 13, 0);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color:rgb(151, 13, 0);
+}
+
+.jaune {
+    background-color: rgb(210, 154, 1);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+color:  rgb(210, 154, 1);
+}
+
+.lignehaut:hover {
+    background-color: rgb(199, 199, 199);
+    color: rgb(199, 199, 199);
+}
+.grillerouge{
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: row;
+    border: 0.15rem solid;
+    width: 27rem;
+    height: 23rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(109, 33, 33);
+    box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.5); 
+
+}
+
+
+.grillejaune{
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: row;
+    border: 0.15rem solid;
+    width: 27rem;
+    height: 23rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(117, 81, 20);
+    box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.5); 
+
+}
+
+.ombrejaune{
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: row;
+
+    background-color: rgb(60, 60, 60);
+    
+    border: 0.15rem solid;
+    width: 27rem;
+    height: 23rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 10px 3px rgba(255, 166, 0, 0.5); 
+   
+}
+.ombrerouge{
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(60, 60, 60);
+    border: 0.15rem solid;
+    width: 27rem;
+    height: 23rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 10px 3px rgba(255, 0, 0, 0.5); 
+}
+.restart{
+    border-radius: 0.2rem;
+    color: white;
+    background-color: rgb(0, 104, 0);
+    width: 5rem;
+    box-shadow: 0 0 10px 0.3px black;
+    margin-top: 1rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1rem;
+}
+.restart:hover{
+    background-color: rgb(1, 169, 1);
+}
+#tour{
+
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+}
+.textrouge{
+color: rgb(166, 0, 0);
+}
+.textjaune{
+color: rgb(162, 129, 22);
+}
+#joueur{
+    margin-right: 0.4rem;
+}
+
+.coloneblanche{
+    background-color: rgb(152, 152, 152);
+    color: rgb(152, 152, 152);
+}
