@@ -32,6 +32,10 @@ joueur.innerText = "Rouge"
 let compteur = 0
 let vic = 0
 
+// importer mes gifs
+let soldatrouge = document.getElementById('soldatrouge')
+let soldatjaune = document.getElementById('soldatjaune')
+soldatjaune.classList.add('soldatgris')
 //crée une liste de mes colonnes
 
 const jeu = [colone1, colone2, colone3, colone4, colone5, colone6, colone7]
@@ -109,6 +113,8 @@ function rougewin() {
     grille.classList.remove('ombrerouge')
     grille.classList.remove('ombrejaune')
     grille.classList.add('grillerouge')
+    soldatjaune.classList.add('soldatgris')
+    soldatrouge.classList.remove('soldatgris')
     jeu.forEach(colone => {
         colone.forEach(bouton => {
             bouton.classList.remove('lignehaut')
@@ -135,6 +141,8 @@ function jaunewin() {
     grille.classList.remove('ombrerouge')
     grille.classList.remove('ombrejaune')
     grille.classList.add('grillejaune')
+    soldatjaune.classList.remove('soldatgris')
+    soldatrouge.classList.add('soldatgris')
     jeu.forEach(colone => {
         colone.forEach(bouton => {
             bouton.disabled = true
@@ -171,7 +179,8 @@ restart.addEventListener('click', () => {
     joueur.classList.remove('textjaune')
     grille.classList.add('ombrerouge')
     compteur = 0
-
+    soldatrouge.classList.remove('soldatgris')
+    soldatjaune.classList.add('soldatgris')
 })
 
 
@@ -343,6 +352,9 @@ function game() {
                             joueur.innerText = "Jaune"
                             joueur.classList.remove('textrouge')
                             joueur.classList.add('textjaune')
+                            
+                            soldatrouge.classList.add('soldatgris')
+                            soldatjaune.classList.remove('soldatgris')
 
                         } else {
                             colone[0].classList.add("jaune")
@@ -350,6 +362,9 @@ function game() {
                             joueur.innerText = "Rouge"
                             joueur.classList.remove('textjaune')
                             joueur.classList.add('textrouge')
+
+                            soldatjaune.classList.add('soldatgris')
+                            soldatrouge.classList.remove('soldatgris')
                         }
                     compteur = 1 - compteur
                     }

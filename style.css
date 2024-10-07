@@ -1,12 +1,32 @@
+#soldatrouge{
+    mix-blend-mode: multiply;
+    position: absolute;  
+    z-index: -10;
+    left: 5%;
+    top : 17%;
+    
+
+}
+#soldatjaune{
+    mix-blend-mode: multiply;
+    position: absolute;  
+    z-index: -10;
+    right:5%;
+    top : 17%;
+}
+.soldatgris{
+filter: grayscale(95%);
+}
 body {
     display: flex;
     justify-content: center;
-    background-color: rgb(104, 104, 104);
+    background-color: rgb(216, 216, 216);
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     text-align: center;
    
 
 }
+
 .titre{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
@@ -26,7 +46,7 @@ body {
     display: flex;
     flex-direction: row;
 
-    background-color: rgb(60, 60, 60);
+    background-color: rgb(116, 116, 116);
     
     border: 0.15rem solid;
     width: 27rem;
@@ -41,12 +61,12 @@ button {
     width: 2.7rem;
     height: 2.7rem;
     margin: 0.5rem;
-    background-color: rgb(86, 85, 85);
+    background-color: rgb(203, 203, 203);
    
     border: 0.15rem solid;
     border-color: black;
     border-radius: 4rem;
-    color:  rgb(86, 85, 85);
+    color:  rgb(203, 203, 203);
    
 }
 
@@ -79,8 +99,8 @@ color:  rgb(210, 154, 1);
 }
 
 .lignehaut:hover {
-    background-color: rgb(199, 199, 199);
-    color: rgb(199, 199, 199);
+    background-color: rgb(147, 146, 146);
+    color: rgb(147, 146, 146);
 }
 .grillerouge{
     border-radius: 1rem;
@@ -92,7 +112,7 @@ color:  rgb(210, 154, 1);
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgb(109, 33, 33);
+    background-color: rgb(168, 9, 9);
     box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.5); 
 
 }
@@ -108,7 +128,7 @@ color:  rgb(210, 154, 1);
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgb(117, 81, 20);
+    background-color: rgb(152, 100, 10);
     box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.5); 
 
 }
@@ -118,7 +138,7 @@ color:  rgb(210, 154, 1);
     display: flex;
     flex-direction: row;
 
-    background-color: rgb(60, 60, 60);
+    background-color: rgb(158, 158, 158);
     
     border: 0.15rem solid;
     width: 27rem;
@@ -133,7 +153,7 @@ color:  rgb(210, 154, 1);
     border-radius: 1rem;
     display: flex;
     flex-direction: row;
-    background-color: rgb(60, 60, 60);
+    background-color: rgb(158, 158, 158);
     border: 0.15rem solid;
     width: 27rem;
     height: 23rem;
@@ -165,7 +185,7 @@ color:  rgb(210, 154, 1);
 color: rgb(166, 0, 0);
 }
 .textjaune{
-color: rgb(162, 129, 22);
+color: rgb(201, 155, 6);
 }
 #joueur{
     margin-right: 0.4rem;
