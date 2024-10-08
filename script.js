@@ -113,7 +113,11 @@ function rougewin() {
     grille.classList.remove('ombrerouge')
     grille.classList.remove('ombrejaune')
     grille.classList.add('grillerouge')
-    soldatjaune.classList.add('soldatgris')
+    soldatjaune.src = 'jaune-lose.gif'
+    soldatrouge.src = 'win_rouge.gif'
+    soldatjaune.classList.add('lose')
+    soldatrouge.classList.add('winrouge')
+    soldatjaune.classList.remove('soldatgris')
     soldatrouge.classList.remove('soldatgris')
     jeu.forEach(colone => {
         colone.forEach(bouton => {
@@ -141,8 +145,12 @@ function jaunewin() {
     grille.classList.remove('ombrerouge')
     grille.classList.remove('ombrejaune')
     grille.classList.add('grillejaune')
+    soldatrouge.src = 'rouge-lose.gif'
+    soldatjaune.src = 'win_jaune.gif'
+    soldatrouge.classList.add('lose')
+    soldatjaune.classList.add('winjaune')
     soldatjaune.classList.remove('soldatgris')
-    soldatrouge.classList.add('soldatgris')
+    soldatrouge.classList.remove('soldatgris')
     jeu.forEach(colone => {
         colone.forEach(bouton => {
             bouton.disabled = true
@@ -181,6 +189,12 @@ restart.addEventListener('click', () => {
     compteur = 0
     soldatrouge.classList.remove('soldatgris')
     soldatjaune.classList.add('soldatgris')
+    soldatjaune.src = 'gif_jaune.gif'
+    soldatrouge.src = 'gif_rouge.gif'
+    soldatjaune.classList.remove('lose')
+    soldatrouge.classList.remove('lose')
+    soldatjaune.classList.remove('winjaune')
+    soldatrouge.classList.remove('winrouge')
 })
 
 
