@@ -35,7 +35,12 @@ let vic = 0
 // importer mes gifs
 let soldatrouge = document.getElementById('soldatrouge')
 let soldatjaune = document.getElementById('soldatjaune')
+let resultatrouge = document.getElementById('resultatrouge')
+let resultatjaune = document.getElementById('resultatjaune')
+resultatrouge.style.display = 'none'
+resultatjaune.style.display = 'none'
 soldatjaune.classList.add('soldatgris')
+let fond = document.getElementById('fond')
 //crée une liste de mes colonnes
 
 const jeu = [colone1, colone2, colone3, colone4, colone5, colone6, colone7]
@@ -110,15 +115,13 @@ function rougewin() {
     joueur.classList.remove('textjaune')
     joueur.classList.add('textrouge')
     vic = 1
-    grille.classList.remove('ombrerouge')
-    grille.classList.remove('ombrejaune')
     grille.classList.add('grillerouge')
-    soldatjaune.src = 'jaune-lose.gif'
-    soldatrouge.src = 'win_rouge.gif'
-    soldatjaune.classList.add('lose')
-    soldatrouge.classList.add('winrouge')
     soldatjaune.classList.remove('soldatgris')
     soldatrouge.classList.remove('soldatgris')
+    resultatjaune.style.display = 'block'
+    resultatrouge.style.display = 'block'
+    resultatjaune.src = 'lose.gif'
+    resultatrouge.src = 'win.gif'
     jeu.forEach(colone => {
         colone.forEach(bouton => {
             bouton.classList.remove('lignehaut')
@@ -142,13 +145,11 @@ function jaunewin() {
 
     joueur.innerText = "Jaune a gagné"
     vic = 1
-    grille.classList.remove('ombrerouge')
-    grille.classList.remove('ombrejaune')
     grille.classList.add('grillejaune')
-    soldatrouge.src = 'rouge-lose.gif'
-    soldatjaune.src = 'win_jaune.gif'
-    soldatrouge.classList.add('lose')
-    soldatjaune.classList.add('winjaune')
+    resultatjaune.style.display = 'block'
+    resultatrouge.style.display = 'block'
+    resultatjaune.src = 'win.gif'
+    resultatrouge.src = 'lose.gif'
     soldatjaune.classList.remove('soldatgris')
     soldatrouge.classList.remove('soldatgris')
     jeu.forEach(colone => {
@@ -195,6 +196,8 @@ restart.addEventListener('click', () => {
     soldatrouge.classList.remove('lose')
     soldatjaune.classList.remove('winjaune')
     soldatrouge.classList.remove('winrouge')
+    resultatrouge.style.display = 'none'
+    resultatjaune.style.display = 'none'
 })
 
 

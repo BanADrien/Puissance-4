@@ -1,21 +1,26 @@
+
+#fond{
+    position: absolute;  
+    z-index: -10;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
 #soldatrouge{
-    mix-blend-mode: multiply;
     position: absolute;  
     z-index: -10;
     left: 5%;
-    top : 17%;
-    
-
+    top : 50%;
 }
 #soldatjaune{
-    mix-blend-mode: multiply;
     position: absolute;  
     z-index: -10;
     right:5%;
-    top : 17%;
+    top : 49%;
 }
 .soldatgris{
-filter: grayscale(95%);
+filter: grayscale(90%);
 }
 .lose{
 top: 5%;
@@ -41,7 +46,21 @@ body {
    
 
 }
+#resultatjaune {
+    position: absolute;
+    z-index: 1; /* Assurez-vous que le z-index est supérieur à celui des soldats */
+    right: 5%; /* Aligne avec le soldat jaune */
+    top: 25%; /* Ajustez pour placer au-dessus du soldat jaune */
+    margin-right: -1.5%;
+}
 
+#resultatrouge {
+    position: absolute;
+    z-index: 1; /* Assurez-vous que le z-index est supérieur à celui des soldats */
+    left: 4%; /* Aligne avec le soldat rouge */
+    top: 25%; /* Ajustez pour placer au-dessus du soldat rouge */
+    margin-left: -1%;
+}
 .titre{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
@@ -76,13 +95,14 @@ button {
     width: 2.7rem;
     height: 2.7rem;
     margin: 0.5rem;
-    background-color: rgb(203, 203, 203);
+    background-color: rgba(10, 10, 10, 0.7);
    
-    border: 0.15rem solid;
+    border: 0.2rem solid;
     border-color: black;
     border-radius: 4rem;
     color:  rgb(203, 203, 203);
-   
+   z-index: 10;
+   box-shadow: 0 0 4px 3px inset rgba(0, 0, 0, 0.5);
 }
 
 .tout {
@@ -116,6 +136,20 @@ color:  rgb(210, 154, 1);
 .lignehaut:hover {
     background-color: rgb(147, 146, 146);
     color: rgb(147, 146, 146);
+}
+#grille{
+    overflow: hidden;
+    position: relative;
+    box-shadow:  0 0 10px 3px rgba(0, 0, 0, 0.5);
+}
+.brique {
+    top: 0; /* Positionne l'image en haut */
+    left: 0; /* Positionne l'image à gauche */
+    width: 100%; /* L'image prend toute la largeur de la div */
+    height: 100%; /* L'image prend toute la hauteur de la div */
+    object-fit: cover; /* L'image s'ajuste pour couvrir toute la surface */
+    z-index: 1; /* Met l'image derrière les autres éléments */
+    position: absolute;
 }
 .grillerouge{
     border-radius: 1rem;
@@ -161,7 +195,6 @@ color:  rgb(210, 154, 1);
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 0 10px 3px rgba(255, 166, 0, 0.5); 
    
 }
 .ombrerouge{
@@ -175,7 +208,6 @@ color:  rgb(210, 154, 1);
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 0 10px 3px rgba(255, 0, 0, 0.5); 
 }
 .restart{
     border-radius: 0.2rem;
