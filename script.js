@@ -26,9 +26,7 @@ const colone6 = Array.from(document.querySelectorAll('#col6 button'))
 const colone7 = Array.from(document.querySelectorAll('#col7 button'))
 
 //importer la balise et le compteur qui défini a qui est le tour de jouer
-let player = document.getElementById('joueur')
-let joueur = document.getElementById('color')
-joueur.innerText = "Rouge"
+
 let compteur = 0
 let vic = 0
 
@@ -110,10 +108,7 @@ function gravité(colonne, index = 0) {
 // fonction pour appliquer des choses quand le joueur rouge a gagner
 
 function rougewin() {
-    player.innerText = ""
-    joueur.innerText = "Rouge a gagné"
-    joueur.classList.remove('textjaune')
-    joueur.classList.add('textrouge')
+
     vic = 1
     grille.classList.add('grillerouge')
     soldatjaune.classList.remove('soldatgris')
@@ -139,11 +134,7 @@ function rougewin() {
 function jaunewin() {
 
 
-    player.innerText = ""
-    joueur.classList.remove('textrouge')
-    joueur.classList.add('textjaune')
 
-    joueur.innerText = "Jaune a gagné"
     vic = 1
     grille.classList.add('grillejaune')
     resultatjaune.style.display = 'block'
@@ -179,13 +170,10 @@ restart.addEventListener('click', () => {
             bouton.disabled = false
         })
     })
-    player.innerText = "Joueur :"
     vic = 0
     grille.classList.remove('grillerouge')
     grille.classList.remove('grillejaune')
-    joueur.innerHTML = "Rouge"
-    joueur.classList.add('textrouge')
-    joueur.classList.remove('textjaune')
+
     grille.classList.add('ombrerouge')
     compteur = 0
     soldatrouge.classList.remove('soldatgris')
@@ -366,9 +354,7 @@ function game() {
                         if (compteur === 0) {
                             colone[0].innerHTML = "  "
                             colone[0].classList.add('rouge')
-                            joueur.innerText = "Jaune"
-                            joueur.classList.remove('textrouge')
-                            joueur.classList.add('textjaune')
+
                             
                             soldatrouge.classList.add('soldatgris')
                             soldatjaune.classList.remove('soldatgris')
@@ -376,9 +362,7 @@ function game() {
                         } else {
                             colone[0].classList.add("jaune")
                             colone[0].innerHTML = "   "
-                            joueur.innerText = "Rouge"
-                            joueur.classList.remove('textjaune')
-                            joueur.classList.add('textrouge')
+
 
                             soldatjaune.classList.add('soldatgris')
                             soldatrouge.classList.remove('soldatgris')

@@ -1,4 +1,4 @@
-
+@import url('https://fonts.cdnfonts.com/css/public-pixel');
 #fond{
     position: absolute;  
     z-index: -10;
@@ -62,8 +62,12 @@ body {
     margin-left: -1%;
 }
 .titre{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Public Pixel', sans-serif;
+    color: rgb(213, 112, 4);
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
     margin: 0;
+    margin-bottom: 15%;
+    font-size: 2.5rem;
 }
 .joueur{
     margin: 0;
@@ -209,19 +213,17 @@ color:  rgb(210, 154, 1);
     align-items: center;
     justify-content: center;
 }
-.restart{
+#restart{
     border-radius: 0.2rem;
-    color: white;
-    background-color: rgb(0, 104, 0);
-    width: 5rem;
-    box-shadow: 0 0 10px 0.3px black;
-    margin-top: 1rem;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 1rem;
+    width: 35%;
+    margin-top: -7%;
+    filter: grayscale(70%);
+
 }
-.restart:hover{
-    background-color: rgb(1, 169, 1);
+#restart:hover{
+    filter: grayscale(0);
 }
+
 #tour{
 
     display: flex;
